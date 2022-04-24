@@ -1,0 +1,36 @@
+body {
+    background-color: whitesmoke;
+    color: #555555;
+    font: normal 16px Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+.table{
+    width: 80%;
+    margin:auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-style: italic;
+    /*word-spacing: 1em; */
+}
+
+.box {
+    width: 100%;
+    margin: 40px auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+input{
+    padding:10 10 10 40px;
+    width: 100%;
+    margin: 50px;
+    border: 1px solid #e2e2e2;
+    border-radius: 35px;
+    height: 30px;
+    float: left;
+    background-size: 25px;
+    background-position:5px center;
+
+    padding:0 0 0 40px;
+
+}
