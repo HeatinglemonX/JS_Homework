@@ -1,0 +1,5 @@
+const str = "'Perhaps The Easiest-to-understand Case For Reduce Is To Retur The Sum Of All The Elements In An Array '";
+
+const replaced = str.replace(/[^a-z0-9]/gi, '');
+const final = replaced.toLowerCase()
+console.log(final); 
