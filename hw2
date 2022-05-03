@@ -3,44 +3,40 @@ const itemsObject = [
   { quantity: 3, price: 350 },
   { quantity: 5, price: 400 },
 ];
-var doubledNumbers = [];
-var sumValues = [];
-//var doubledNumbers = itemsObject.map(n => n*2);
-//console.log(itemsObject[0].quantity);
 
-/*var a1 = itemsObject.map((elem) => {
-  {
-    quantity: elem.quantity * 2,
-    price: elem.price*2,
-    
-  }
-});*/
-
-function doubled(arr) {
-  for (var i = 0; i < arr.length; i++) {
-    var quant = arr[i].quantity;
-    var pri = arr[i].price;
-    var dub_quant = quant * 2;
-    var dub_price = pri * 2;
-    doubledNumbers.push(dub_quant);
-    doubledNumbers.push(dub_price);
+function doubled() {
+  const doubledNumbers = {};
+  for (let i = 0; i < itemsObject.length; i++) {
+    let dummy = {
+      quantity: itemsObject[i].quantity * 2,
+      price: itemsObject[i].price * 2,
+    };
+    doubledNumbers[i] = dummy;
   }
 }
-var collectionNumbers = {
-  orginialNumbers: itemsObject,
-  doubledNumbers: doubled(itemsObject),
-};
 
-console.log(collectionNumbers);
+function containItem() {
+  const containItemArray = {};
+  let count = 0;
+  for (let i = 0; i < itemsObject.length; i++) {
+    if (itemsObject[i].quantity > 2 && itemsObject[i].price > 300) {
+      let dummy = {
+        quantity: itemsObject[i].quantity,
+        price: itemsObject[i].price,
+      };
+      containItemArray[count] = dummy;
+      count++;
+    }
+  }
+}
 
-function totalValue(arr) {
+function totalValue() {
   let totalValue = 0;
-  for (let i = 0; i < arr.length; i++) {
-    var quant = arr[i].quantity;
-    var pri = arr[i].price;
-    totalValue = quant * pri;
-    sumValues.push(totalValue);
+  for (let i = 0; i < itemsObject.length; i++) {
+    totalValue = totalValue + itemsObject[i].price;
   }
 }
 
+console.log(doubled(itemsObject));
+console.log(containItem(itemsObject));
 console.log(totalValue(itemsObject));
